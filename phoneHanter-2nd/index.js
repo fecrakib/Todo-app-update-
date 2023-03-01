@@ -1,6 +1,6 @@
 const phonesE=document.getElementById('phones')
-const loadPhones=async()=>{
-    const url=`https://openapi.programming-hero.com/api/phones?search=iphone`
+const loadPhones=async(searchText)=>{
+    const url=`https://openapi.programming-hero.com/api/phones?search=${searchText}`
     const res=await fetch(url)
     const data=await res.json();
    
@@ -9,7 +9,7 @@ const loadPhones=async()=>{
 const displayData=(phones)=>{
 console.log(phones)
 phones.map(phone=>{
-    console.log(phone)
+    // console.log(phone)
     const phoneDiv=document.createElement('div')
     phoneDiv.innerHTML=`
     <div class="card w-96 bg-base-100 shadow-xl">
@@ -28,4 +28,12 @@ phones.map(phone=>{
 phonesE.appendChild(phoneDiv)
 })
 }
-loadPhones()
+
+
+// seacrh field add
+const searchFieldE=document.getElementById('searchField')
+const seacrhBtn=document.getElementById('btn-search')
+seacrhBtn.addEventListener('click',()=>{
+  const searchText=searchFieldE.value ;
+  loadPhones(searchText)
+})
