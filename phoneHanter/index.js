@@ -69,7 +69,7 @@ document.querySelector('#searchField').addEventListener('keypress', function (e)
         processSeach(10)
     }
 });
-// lading function
+// loading function
 const toggleSpinner=isLoading=>{
     const loaderSection=document.getElementById('loader')
     if(isLoading){
@@ -106,24 +106,3 @@ console.log(phone);
 }
 loadPhone('a')
 
-const dreamGirl = [
-    {
-     sokina: {
-      name: "bbu",
-      height: "5.4",
-      family: [{ father: "rock", mother: "shila", sister: "chinki" }],
-      age: undefined,
-      contactInfo: [
-       {
-        facebook: {
-         link: "https://www.facebook.com/",
-         followers: "12545",
-         status: "single",
-         friendsList: [{ name: "rofik" }, undefined],
-        },
-       },
-       { instagram: "https://www.instagram.com/" },
-      ],
-     },
-    },
-   ];

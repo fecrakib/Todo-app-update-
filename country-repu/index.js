@@ -4,15 +4,16 @@ const loadCountry=()=>{
     .then(res=>res.json())
     .then(data=>{
     //    console.log(data);
-       showAllCountry(data.slice(0,2))
+       showAllCountry(data.slice(0,10))
     })
 }
 const showAllCountry=(conuntries)=>{
-console.log(conuntries);
-
+// console.log(conuntries);
+countriesE.innerHTML=''
 conuntries.map(country=>{
-    console.log(country)
+    // console.log(country)
     const countryDiv=document.createElement('div')
+   
     countryDiv.innerHTML=`
     <div class="card w-96 bg-base-100 shadow-xl ">
     <figure class="px-10 pt-10">
@@ -22,7 +23,7 @@ conuntries.map(country=>{
       <h2 class="card-title">${country.name.common}</h2>
       <p>If a dog chews shoes whose shoes does he choose?</p>
       <div class="card-actions">
-        <button class="btn btn-primary">Buy Now</button>
+        <button onclick="showDetails('${country.cca2}')" class="btn btn-primary">Buy Now</button>
       </div>
     </div>
   </div>
@@ -32,4 +33,18 @@ conuntries.map(country=>{
 })
 
 }
+const showDetails=(id)=>{
+  const URL=`https://restcountries.com/v3.1/alpha/${id}`
+  fetch(res=>json())
+  .then(data=>console.log(data))
+console.log(URL)
+}
 loadCountry()
+const showAllCountryTogether=()=>{
+  fetch('https://restcountries.com/v3.1/all')
+  .then(res=>res.json())
+  .then(data=>{
+  //    console.log(data);
+     showAllCountry(data)
+  })
+}
