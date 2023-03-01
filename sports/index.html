@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/output.css" rel="stylesheet">
+   
+</head>
+<body>
+    <section>
+        <div class="grid grid-cols-2">
+            <div class="bg-green-300 px-5">
+                <h1>  left</h1>
+                <input id="search-value" type="text" placeholder="Type here" class=" input input-bordered input-primary w-full max-w-xs" />
+                <button id="btn-search" onclick="searchAllData()" class="bg-green-400 px-8 py-2 rounded-md hover:bg-blue-500">Search</button>
+                <!-- display div load -->
+                <div id="players" class="grid gri grid-cols-2 gap-5 mt-6">
+
+                </div>
+            </div>
+            <div class="bg-red-400"><h1>Right</h1> </div>
+        </div>
+     
+    </section> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
